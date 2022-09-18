@@ -1,6 +1,5 @@
 # import the pygame module, so you can use it
 import pygame
-import os
 from ChargerSauvegarder import ChargerSauvegarder
 
 from right_menu import RightMenu

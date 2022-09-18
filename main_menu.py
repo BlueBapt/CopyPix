@@ -55,7 +55,6 @@ class MainMenu :
                         screen.blit(pygame.transform.scale(self.img_level_not_hovered,(zoom*60,zoom*10)),(2*zoom,((i%4)*12+2)*zoom,zoom*60,zoom*10))
                     text = self.font.render(self.level_name_list[i],1,(255,255,255))
                     screen.blit(text,(4*zoom,((i%4)*12+4)*zoom))
-                    # print(pygame.Rect(64*zoom,(i-(self.page*8))*8*zoom,8*zoom,8*zoom))
                 else:
                     break
             screen.blit(pygame.transform.scale(self.l_arrow,(8*zoom,zoom*8)),(0,56*zoom,zoom*8,zoom*8))
@@ -111,7 +110,7 @@ class MainMenu :
                     k = pygame.key.get_pressed() 
                         
                     if k[pygame.K_ESCAPE]:
-                        self.changeToSelectionScreen()
+                        self.changeToTitleScreen()
                         
                     if k[pygame.K_SPACE]:
                         return (True,self.level_name_list[self.level_hovered])
